@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biến Đổi Khí Hậu Việt Nam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button id="startBtn">START NOW</button>
+        <div id="inputName" class="hidden">
+            <label for="name">What your name?</label>
+            <input type="text" id="name" name="name">
+            <button id="submitName">Submit</button>
+        </div>
+        <div id="climateChange" class="hidden">
+            <button id="climateBtn">Biến đổi khí hậu</button>
+        </div>
+        <div id="earthGlobe" class="hidden">
+            <img src="earth.png" alt="Earth">
+        </div>
+        <div id="infoSections" class="hidden">
+            <div id="section1" class="section hidden"></div>
+            <div id="section2" class="section hidden"></div>
+            <div id="section3" class="section hidden"></div>
+            <div id="section4" class="section hidden"></div>
+        </div>
+        <div id="thankYou" class="hidden">
+            <h1>Cảm ơn bạn, <span id="userName"></span>!</h1>
+            <p>Tác giả: Trần Đức Nam - Lớp 9A4 - THCS Kim Long</p>
+            <p>Thiết kế & Ý tưởng: Trần Đức Nam - Lớp 9A4 - THCS Kim Long</p>
+            <p>Phần mềm chuyên dụng khai phá IDE: Visual Studio</p>
+            <audio id="thanksAudio" autoplay>
+                <source src="see_you_again.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button id="exitBtn">Thoát</button>
+        </div>
+        <button id="nextBtn" class="hidden">Tiếp theo</button>
+        <!-- Thêm phần này vào -->
+        <div id="qrCodeContainer" class="hidden">
+            <h2>QR Code</h2>
+            <input type="text" id="qrText" placeholder="Enter URL for QR Code">
+            <button id="generateQR">Generate QR Code</button>
+            <div id="qrCode"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

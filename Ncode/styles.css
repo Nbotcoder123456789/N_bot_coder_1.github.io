@@ -1,0 +1,107 @@
+/* Hiệu ứng nền chuyển màu gradient mượt */
+body {
+    background: linear-gradient(45deg, #ff0000, #000000);
+    background-size: 400% 400%;
+    color: white;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: gradientBG 10s ease infinite;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 5);
+}
+
+.hidden {
+    display: none;
+}
+
+#qrCodeContainer {
+    margin-top: 20px;
+}
+
+#qrText {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+#generateQR {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#qrCode {
+    margin-top: 20px;
+}
+
+@keyframes gradientBG {
+    0% { background: #ff0000; }
+    33% { background: #000000; }
+    66% { background: #ffffff; }
+    100% { background: #ff0000; }
+}
+
+.video-container {
+    text-align: center;
+    margin: 20px;
+}
+
+video {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+button {
+    background-color: #ffcc5c;
+    border: none;
+    padding: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    animation: pulse 1s infinite;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+button:hover {
+    background-color: gold;
+    transform: scale(1.1);
+}
+
+.section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transition: opacity 0.5s;
+}
+
+.section p {
+    display: none; /* Ẩn ban đầu */
+    opacity: 0;
+}
+
+#earthGlobe img {
+    animation: spin 5s linear;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
